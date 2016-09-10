@@ -43,7 +43,6 @@ bool isPrime(ull n){
 	if(n<2)
 		return false;
 	int range = sqrt(n),i=2;
-	cout<<range<<endl;
 	while(i<=range)
 		if(n % i == 0)
 			return false;
