@@ -45,27 +45,14 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		/*
-		4&1
-		0100
-		0001
-		0000
-		0101
-		*/
-		ull sum;
 		int n;
 		cin>>n;
-		sum = fact(n);
-		ull m=1;
-		int c=0;
-		cout<<sum<<"="<<(sum&m)<<"->"<<(sum|m)<<endl;
-		/*
-		while(sum&m){
-			c++;
-			m<<=1;
-		}*/
+		int c=0,powerOf5=5;
+		while(powerOf5<=n){
+			c += n/powerOf5;
+			powerOf5 *= 5;
+		}
 		cout<<c<<endl;
-
 	}
 	return 0;
 }
