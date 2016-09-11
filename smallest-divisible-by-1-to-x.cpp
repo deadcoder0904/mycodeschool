@@ -30,13 +30,35 @@ typedef long double ld;
 bool even(int x) { return x%2==0?true:false; }
 bool odd(int x) {return x%2==1?true:false; }
 ull fact(int a){ ull f=1; REP2(i,1,a+1) f*=i; return f;}
-ull gcd(int a, int b){ return b == 0 ? a : gcd(b,a%b); }
-ull lcm(int a,int b){ return a*b/gcd(a,b);}
+ull gcd(ull a, ull b){ return b == 0 ? a : gcd(b,a%b); }
+ull lcm(ull a,ull b){ return a*b/gcd(a,b);}
 ll fast_expo(ll a,ll b)
 {
     if(b==1) return a;
     if(b==2) return a*a;
     return b&1 ? a*fast_expo(fast_expo(a,(b-1)/2),2) : fast_expo(fast_expo(a,b/2),2);
+}
+
+void bruteForce(int n){
+	ull i=2;
+	REP2(j,2,n+1)
+	{
+		if(i%j!=0)
+			{
+				j=1;
+				i++;
+			}
+	}
+	cout<<i<<endl;
+}
+
+void LCM_approach(int n){
+	ull i=2,j=2;
+	while(j<=n){
+		i = lcm(j,i);
+		j++;
+	}
+	cout<<i<<endl;
 }
 
 int main()
@@ -45,18 +67,10 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		ull n;
+		int n;
 		cin>>n;
-		ull i=2;
-		for (ull j = 2; j <= n ; ++j)
-		{
-			if(i%j!=0)
-				{
-					j=1;
-					i++;
-				}
-		}
-		cout<<i<<endl;			
+		// bruteForce(n);
+		LCM_approach(n);			
 	}
 	return 0;
 }
