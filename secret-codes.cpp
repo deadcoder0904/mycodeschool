@@ -29,7 +29,7 @@ typedef long double ld;
 
 bool even(int x) { return x%2==0?true:false; }
 bool odd(int x) {return x%2==1?true:false; }
-ull fact(int a){ ull f=1; REP(i,a) f*=1; return f;}
+ull fact(int a){ ull f=1; REP2(i,1,a+1) f*=i; return f;}
 ull gcd(int a, int b){ return b == 0 ? a : gcd(b,a%b); }
 ull lcm(int a,int b){ return a*b/gcd(a,b);}
 ll fast_expo(ll a,ll b)

@@ -45,28 +45,27 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		int m,n;
-		cin>>m>>n;
-		char a[m][n];
-		REP(i,m)
-			REP(j,n)
-				cin>>a[i][j];
-		char c;
-		cin>>c;
-		if(c == 'V'){
-			REP(i,m){
-				NREP(j,n)
-					cout<<a[i][j];
-				cout<<endl;	
-			}
-		}
-		else {
-			NREP(i,m){
-				REP(j,n)
-					cout<<a[i][j];
-				cout<<endl;	
-			}
-		}		
+		/*
+		4&1
+		0100
+		0001
+		0000
+		0101
+		*/
+		ull sum;
+		int n;
+		cin>>n;
+		sum = fact(n);
+		ull m=1;
+		int c=0;
+		cout<<sum<<"="<<(sum&m)<<"->"<<(sum|m)<<endl;
+		/*
+		while(sum&m){
+			c++;
+			m<<=1;
+		}*/
+		cout<<c<<endl;
+
 	}
 	return 0;
 }
