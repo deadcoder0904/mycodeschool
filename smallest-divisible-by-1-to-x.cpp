@@ -45,10 +45,11 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		int n;
+		ull n;
 		cin>>n;
-		int i=2;
-		REP2(j,2,n+1){
+		ull i=2;
+		for (ull j = 2; j <= n ; ++j)
+		{
 			if(i%j!=0)
 				{
 					j=1;
