@@ -42,11 +42,11 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
 
-bool even(int x) { return x%2==0?true:false; }
-bool odd(int x) {return x%2==1?true:false; }
-ull fact(int a){ ull f=1; REP2(i,1,a+1) f*=i; return f;}
+bool even(ull x) { return x%2==0?true:false; }
+bool odd(ull x) {return x%2==1?true:false; }
+ull fact(ull a){ ull f=1; REP2(i,1,a+1) f*=i; return f;}
 ull gcd(ull a, ull b){ return b == 0 ? a : gcd(b,a%b); }
-ull lcm(int a,int b){ return a*b/gcd(a,b);}
+ull lcm(ull a,ull b){ return a*b/gcd(a,b);}
 ll fast_expo(ll a,ll b)
 {
     if(b==1) return a;
