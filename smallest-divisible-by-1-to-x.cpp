@@ -53,7 +53,7 @@ void bruteForce(int n){
 }
 
 void LCM_approach(int n){
-	ull i=2,j=2;
+	ull i=1,j=2;
 	while(j<=n){
 		i = lcm(j,i);
 		j++;
