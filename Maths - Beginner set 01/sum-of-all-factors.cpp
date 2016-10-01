@@ -2,12 +2,19 @@
 
 using namespace std;
 
-void sum_of_all_factors(int n){
-	int sum=1;
-	for (int i = 2; i <= n; ++i)
-		if(n % i == 0)
+typedef long long ll;
+
+void sum_of_all_factors(ll n){
+	ll sum=0;
+	for (ll i = 1; i <= sqrt(n); ++i){
+		if(i*i == n){
 			sum += i;
-	cout<<sum<<endl;	
+			break;
+		}
+		if(n % i == 0)
+			sum += i + n/i;
+	}
+	cout<<sum<<endl;
 }
 
 int main()
