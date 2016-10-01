@@ -7,6 +7,6 @@ int main()
 	int principle,numberofmonths;
 	double yearlyrateofinterest;
 	cin>>principle>>yearlyrateofinterest>>numberofmonths;
-	cout<<(principle * (yearlyrateofinterest/ 12) * numberofmonths)<<endl;
+	cout<<setprecision(2)<<fixed<<(principle * (yearlyrateofinterest/ 12) * numberofmonths)*0.01<<endl;
 	return 0;
 }
