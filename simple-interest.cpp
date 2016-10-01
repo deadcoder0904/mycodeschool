@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-	int principle,number-of-months;
-	double yearly-rate-of-interest;
-	cin>>principal>>yearly-rate-of-interest>>number-of-months;
-	cout<<priniciple * (yearly-rate-of-interest / 12) * number-of-months<<endl;
+	int principle,numberofmonths;
+	double yearlyrateofinterest;
+	cin>>principle>>yearlyrateofinterest>>numberofmonths;
+	cout<<(principle * (yearlyrateofinterest/ 12) * numberofmonths)<<endl;
 	return 0;
 }
